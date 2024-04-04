@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
+
+$primary-scheme: (
+  50: #2D99A6, 100: #2D99A6, 200: #2D99A6, 300: #2D99A6, 400: #2D99A6, 
+  500: #2D99A6, 600: #2D99A6, 700: #2D99A6, 800: #2D99A6, 900: #2D99A6,
+  contrast: (
+    50: #ffffff, 100: #ffffff, 200: #ffffff, 300: #ffffff, 400: #ffffff, 
+    500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff
+  )
+);
+$accent-scheme: (
+  50: #D0E66C, 100: #D0E66C, 200: #D0E66C, 300: #D0E66C, 400: #D6E97F, 
+  500: #D6E97F, 600: #D6E97F, 700: #D6E97F, 800: #D6E97F, 900: #D6E97F,
+  contrast: (
+    50: #ffffff, 100: #ffffff, 200: #ffffff, 300: #ffffff, 400: #ffffff, 
+    500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff
+  )
+);
+$warn-scheme: (
+  50: #d6726a, 100: #d6726a, 200: #d6726a, 300: #d6726a, 400: #d16259, 
+  500: #d16259, 600: #d16259, 700: #d16259, 800: #d16259, 900: #d16259,
+  contrast: (
+    50: #ffffff, 100: #ffffff, 200: #ffffff, 300: #ffffff, 400: #ffffff, 
+    500: #ffffff, 600: #ffffff, 700: #ffffff, 800: #ffffff, 900: #ffffff
+  )
+);
+
+$primary-palette: mat.define-palette($primary-scheme);
+$accent-palette: mat.define-palette($accent-scheme);
+$warn-palette: mat.define-palette($warn-scheme);
+$app-theme: mat.define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+@include mat.all-component-themes($app-theme);
+
+html, body {
+  height: 100%;
+}
+body { 
+  margin: 0; 
+  font-family: Roboto, 
+  "Helvetica Neue", sans-serif; 
+}

@@ -1,0 +1,18 @@
+mat-sidenav-container {
+	height: 100%;
+}
+mat-sidenav {
+	min-width: 250px;
+}
+mat-sidenav-content {
+	background-color: transparent !important;
+}
+mat-toolbar {
+	background-color: transparent !important;
+}
+#logout mat-icon {
+	transform: rotate(180deg);
+}
+.selected {
+	background: rgba(0, 0, 0, 0.04) !important;
+}

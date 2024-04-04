@@ -1,0 +1,24 @@
+:host {
+	--primary: #2D99A6;
+}
+
+mat-toolbar {
+	position: relative;
+	z-index: 999;
+	padding-right: 0 !important;
+}
+
+mat-toolbar img {
+	max-height: calc(100% - 16px);
+	background-color: var(--primary);
+	padding: 8px;
+}
+
+.truncate-text {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.spacer {
+	flex: 1 1 auto;
+}

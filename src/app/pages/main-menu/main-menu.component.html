@@ -1,0 +1,23 @@
+<mat-sidenav-container>
+	<mat-sidenav #mainNav mode="side" [opened]="isMenuOpen()">
+		<mat-toolbar color="primary-contrast">
+			<mat-toolbar-row>Julian's Demo Project</mat-toolbar-row>
+		</mat-toolbar>
+        <mat-nav-list>
+            @for (page of appPages; track $index) {
+                <a mat-list-item [routerLink]="page.url" routerLinkActive="selected">
+                    <mat-icon color="primary" matListItemIcon [fontIcon]="page.icon"></mat-icon>
+                    {{ page.title }}
+                </a>
+            }
+            <mat-divider></mat-divider>
+            <a mat-list-item id="logout" routerLink="/not-found">
+                <mat-icon color="accent" matListItemIcon fontIcon="logout"></mat-icon>
+                Logout
+            </a>
+        </mat-nav-list>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>

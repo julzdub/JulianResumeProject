@@ -1,0 +1,10 @@
+<mat-toolbar class="mat-elevation-z4" color="primary">
+	@if (showMenuButton) {
+		<button mat-icon-button (click)="toggleMainNav()">
+			<mat-icon>menu</mat-icon>
+		</button>
+	}
+	<span class="truncate-text">{{ title }}</span>
+	<span class="spacer"></span>
+	<img src="../../../assets/tree-1.png" alt="Logo" />
+</mat-toolbar>
