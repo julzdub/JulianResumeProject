@@ -1,3 +1,11 @@
 .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 16px;
+}
+embed {
+	height: 100vh;
+	justify-self: center;
+	margin: 0px;
 }
