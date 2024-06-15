@@ -1,4 +1,25 @@
 <app-page-header title="About" [showMenuButton]="true"></app-page-header>
 <div class="wrapper">
+  <h1 [align]="'center'">
+    Links to various media sources featuring me.
+  </h1>
+  <mat-grid-list cols="2" rowHeight="300">
+    @for (link of mediaLinks; track $index) {
+      <mat-grid-tile>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ link.title }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{ link.image }}" alt="{{ link.title }}">
+          <mat-card-content>
+            <p>{{ link.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a href="{{ link.url }}" target="_blank" mat-button>View</a>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
 </div>
 
