@@ -8,7 +8,8 @@ import { PageHeaderComponent } from '../../components/page-header/page-header.co
   standalone: true,
   imports: [
     CommonModule,
-    PageHeaderComponent
+    PageHeaderComponent,
+     
   ],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
