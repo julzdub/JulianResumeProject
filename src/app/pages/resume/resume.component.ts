@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PageHeaderComponent } from '../../components/page-header/page-header.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-resume',
@@ -9,11 +9,9 @@ import { PageHeaderComponent } from '../../components/page-header/page-header.co
   imports: [
     CommonModule,
     PageHeaderComponent,
-     
+    MarkdownModule
   ],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent {
-
-}
+export class ResumeComponent {}
