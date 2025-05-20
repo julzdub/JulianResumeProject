@@ -5,13 +5,13 @@ import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
-import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
+    provideAnimations(),
     importProvidersFrom(HttpClientModule),
-    importProvidersFrom(MarkdownModule.forRoot()),
-    provideClientHydration()
+    importProvidersFrom(MarkdownModule.forRoot())
   ]
 }).catch(err => console.error(err));
